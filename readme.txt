@@ -12,3 +12,6 @@ this is 第6个版本的提交。
 第11次提交后，创建了dev分支。本行内容会提交到dev分支上。第12次提交。
 创建了新分支feature1，本行是解决merge冲突后的内容。
 第16次提交（上个14其实是15），创建了dev分支
+新添加内容，这是为了测试git stash。
+测试feature branch，本行内容会add到dev branch，但不会commit。
+测试feature branch，本行内容不会add到stage。
