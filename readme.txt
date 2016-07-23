@@ -17,3 +17,4 @@ this is 第6个版本的提交。
 测试feature branch，本行内容会不会提交到dev分支上
 测试feature branch，本行内容会提交到dev分支上，但不会commit
 测试feature branch，本行内容会不会提交到dev分支上
+测试feature branch，本行内容会提交到dev分支上，但不会commit
