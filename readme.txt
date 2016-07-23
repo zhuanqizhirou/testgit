@@ -1,5 +1,5 @@
 Git is a distributed version control system.
-Git is free software distributed under the GPL.
+Git is a free software distributed under the GPL.(modified on branch issue-101)
 this is 第四个版本的提交。
 this is 第5个版本的提交。
 this is 第6个版本的提交。
