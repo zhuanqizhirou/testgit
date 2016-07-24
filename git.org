@@ -1,0 +1,123 @@
+** git log
+    ASUS@csiri MINGW64 /e/git/testgit (master)
+    $ git log --graph --pretty=oneline --abbrev-commit
+    *   10c4d4f merged bug 101
+    |\
+    | * 59cdded 第17次提交，fix bug 101
+    |/
+    *   20c6355 merge with no-ff
+    |\
+    | * 62436f1 第16次提交，创建了dev branch
+    |/
+    *   907e5ae 第14次提交，解决了git merge 冲突。
+    |\
+    | * b66f0c7 第13次提交，创建了新分支feature1，第一次
+    * | 6528aa3 这是第14次提交，到master，与feature1冲突
+    |/
+    * aeada56 第12次提交，dev branch 第1次提交
+    * 70fc876 这是第11次提交，删除了test1，test2
+    * 6950121 这是第10次提交了
+    * 1cb724b 第9次提交。
+    * fcaf9ca 第8个版本的提交
+    * c7cb90a 第7个版本的提交
+    * 475d324 这是第6个版本的的提交
+    * ff67be9 这是第5个版本的提交
+    * 372a33f 这是第4个版本的提交
+    * 216efc3 append GPL
+    * cd456e7 git diff readme.txt see change
+    * 483fc73 wrote a readme file
+
+    ASUS@csiri MINGW64 /e/git/testgit (master)
+    $ ^C
+
+    ASUS@csiri MINGW64 /e/git/testgit (master)
+    $ git reflog
+    10c4d4f HEAD@{0}: checkout: moving from dev to master
+    23450ee HEAD@{1}: checkout: moving from f to dev
+    6ca513a HEAD@{2}: commit: dev commit后创建的f branch，commit
+    23450ee HEAD@{3}: checkout: moving from dev to f
+    23450ee HEAD@{4}: checkout: moving from f to dev
+    7b3387a HEAD@{5}: checkout: moving from dev to f
+    23450ee HEAD@{6}: commit: 第21次提交，dev，，因为此时已不能无限切换到f
+    16a5031 HEAD@{7}: commit: 第12次提交，在dev上。测试，dev上还有为staged的内容
+    7b3387a HEAD@{8}: checkout: moving from f to dev
+    7b3387a HEAD@{9}: checkout: moving from dev to f
+    7b3387a HEAD@{10}: checkout: moving from f to dev
+    7b3387a HEAD@{11}: checkout: moving from dev to f
+    7b3387a HEAD@{12}: merge f: Merge made by the 'recursive' strategy.
+    2c81118 HEAD@{13}: checkout: moving from f to dev
+    7ea41b3 HEAD@{14}: commit: 第18次提交？div未提交的工作，包括工作区的内容，当f add后，dev中的文件也变为add了
+    2c81118 HEAD@{15}: checkout: moving from dev to f
+    2c81118 HEAD@{16}: checkout: moving from f to dev
+    2c81118 HEAD@{17}: checkout: moving from dev to f
+    2c81118 HEAD@{18}: merge f: Fast-forward
+    62436f1 HEAD@{19}: checkout: moving from f to dev
+    2c81118 HEAD@{20}: commit: n
+    62436f1 HEAD@{21}: checkout: moving from dev to f
+    62436f1 HEAD@{22}: checkout: moving from f to dev
+    62436f1 HEAD@{23}: checkout: moving from dev to f
+    62436f1 HEAD@{24}: checkout: moving from feature to dev
+    48affc1 HEAD@{25}: commit: n
+    62436f1 HEAD@{26}: checkout: moving from dev to feature
+    62436f1 HEAD@{27}: checkout: moving from feature-vulcan to dev
+    cf90b63 HEAD@{28}: commit: n
+    62436f1 HEAD@{29}: checkout: moving from dev to feature-vulcan
+    62436f1 HEAD@{30}: checkout: moving from master to dev
+    10c4d4f HEAD@{31}: merge issue-101: Merge made by the 'recursive' strategy.
+    20c6355 HEAD@{32}: checkout: moving from issue-101 to master
+    59cdded HEAD@{33}: commit: 第17次提交，fix bug 101
+    20c6355 HEAD@{34}: checkout: moving from master to issue-101
+    20c6355 HEAD@{35}: checkout: moving from dev to master
+    62436f1 HEAD@{36}: checkout: moving from master to dev
+    20c6355 HEAD@{37}: checkout: moving from dev to master
+    62436f1 HEAD@{38}: checkout: moving from master to dev
+    20c6355 HEAD@{39}: merge dev: Merge made by the 'recursive' strategy.
+    907e5ae HEAD@{40}: checkout: moving from dev to master
+    62436f1 HEAD@{41}: commit: 第16次提交，创建了dev branch
+    907e5ae HEAD@{42}: checkout: moving from master to dev
+    907e5ae HEAD@{43}: commit (merge): 第14次提交，解决了git merge 冲突。
+    6528aa3 HEAD@{44}: commit: 这是第14次提交，到master，与feature1冲突
+    aeada56 HEAD@{45}: checkout: moving from feature1 to master
+    b66f0c7 HEAD@{46}: commit: 第13次提交，创建了新分支feature1，第一次
+    aeada56 HEAD@{47}: checkout: moving from master to feature1
+    aeada56 HEAD@{48}: merge dev: Fast-forward
+    70fc876 HEAD@{49}: checkout: moving from dev to master
+    aeada56 HEAD@{50}: commit: 第12次提交，dev branch 第1次提交
+    70fc876 HEAD@{51}: checkout: moving from master to dev
+    70fc876 HEAD@{52}: checkout: moving from dev to master
+    70fc876 HEAD@{53}: checkout: moving from master to dev
+    70fc876 HEAD@{54}: commit: 这是第11次提交，删除了test1，test2
+    6950121 HEAD@{55}: commit: 这是第10次提交了
+    1cb724b HEAD@{56}: commit: 第9次提交。
+    fcaf9ca HEAD@{57}: reset: moving to fcaf
+    475d324 HEAD@{58}: reset: moving to 475d
+    fcaf9ca HEAD@{59}: reset: moving to fcaf
+    475d324 HEAD@{60}: reset: moving to 475d
+    fcaf9ca HEAD@{61}: reset: moving to fcaf
+    475d324 HEAD@{62}: reset: moving to 475d
+    fcaf9ca HEAD@{63}: commit: 第8个版本的提交
+    c7cb90a HEAD@{64}: commit: 第7个版本的提交
+    475d324 HEAD@{65}: reset: moving to 475d
+    ff67be9 HEAD@{66}: reset: moving to ff67
+    475d324 HEAD@{67}: reset: moving to 475d
+    483fc73 HEAD@{68}: reset: moving to 483f
+    cd456e7 HEAD@{69}: reset: moving to cd45
+    483fc73 HEAD@{70}: reset: moving to 483f
+    cd456e7 HEAD@{71}: reset: moving to cd45
+    483fc73 HEAD@{72}: reset: moving to HEAD^
+    cd456e7 HEAD@{73}: reset: moving to HEAD^
+    216efc3 HEAD@{74}: reset: moving to HEAD^
+    372a33f HEAD@{75}: reset: moving to HEAD^
+    ff67be9 HEAD@{76}: reset: moving to ff67
+    483fc73 HEAD@{77}: reset: moving to HEAD~5
+    475d324 HEAD@{78}: commit: 这是第6个版本的的提交
+    ff67be9 HEAD@{79}: commit: 这是第5个版本的提交
+    372a33f HEAD@{80}: commit: 这是第4个版本的提交
+    216efc3 HEAD@{81}: reset: moving to 216e
+    483fc73 HEAD@{82}: reset: moving to HEAD~2
+    216efc3 HEAD@{83}: reset: moving to 216efc
+    483fc73 HEAD@{84}: reset: moving to HEAD~1
+    cd456e7 HEAD@{85}: reset: moving to HEAD^
+    216efc3 HEAD@{86}: commit: append GPL
+    cd456e7 HEAD@{87}: commit: git diff readme.txt see change
+    483fc73 HEAD@{88}: commit (initial): wrote a readme file
